@@ -33,7 +33,7 @@ function gravaDynamoDB(json, callback) {
       callback({ success: false, msg: 'Não foi possivel gravar dados no DynamoDB', data: {} });
     } else {
       console.log("Success", data);
-      callback({ success: true, msg: 'Ok', data: { cep: json.cep } });
+      callback({ success: true, msg: 'Ok', data: json });
     }
   });
 }
